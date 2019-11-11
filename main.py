@@ -35,7 +35,7 @@ def run_sim(input_file,out_file,time_step,center,iter):
             out_file.write("\n")
             out_file.write("Iteration: " + str(i) + "\n")
             for obj in objects:
-                out_file.write(obj.name + " coordinates: " + str(obj.x) + str(obj.y) + "\n")
+                out_file.write(obj.name + " coordinates: " + str(obj.x) + " " + str(obj.y) + "\n")
 
 def main():
     input_file = input("Input file name: ")
