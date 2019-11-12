@@ -1,3 +1,5 @@
+from Force_Field import sim_box
+
 class Physics:
 
     #Gets the acceleration for each bq_charge in a force field
@@ -8,10 +10,24 @@ class Physics:
     def update_velocity(self, time_step, objects):
         for obj in objects:
             obj.velocity = [obj.velocity[0] + obj.accel[0]*time_step, obj.velocity[1] + obj.accel[1]*time_step]
+            #Boundary issues
+            if obj.x < 1 or obj.x > sim_box-1:
+                obj.velocity[0] = 0 - obj.velocity[0]
+            if obj.y < 1 or obj.y > sim_box-1:
+                obj.velocity[1] = 0 - obj.velocity[1]
 
     def update_position(self, time_step, objects):
         for obj in objects:
             obj.x = obj.x + (obj.velocity[0]*time_step) + (time_step**2*.5 *obj.accel[0])
             obj.y = obj.y + (obj.velocity[1]*time_step) + (time_step**2*.5 *obj.accel[1])
+            #Boundary issues
+            if obj.y < 1:
+                obj.y = 1
+            if obj.y > sim_box-1:
+                obj.y = sim_box-1
+            if obj.y < 1:
+                obj.y = 1
+            if obj.y > sim_box-1:
+                obj.y = sim_box-1
 
 
