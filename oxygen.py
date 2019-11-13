@@ -1,3 +1,4 @@
+import math
 class oxygen:
     def __init__(self,pos):
         self.name = "Oxygen"
@@ -8,3 +9,4 @@ class oxygen:
         self.z = pos[2]
         self.accel = [0, 0]
         self.velocity = [0, 0]
+        self.kenergy = math.sqrt(self.velocity[0]**2+self.velocity[1]**2)
