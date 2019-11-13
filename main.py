@@ -1,8 +1,9 @@
-#TODO: create function that can create a new atom object for any atom (like a par file)
+# TODO: create function that can create a new atom object for any atom (like a par file)
 # Make input file more functional: include input and output file
 # Convert to 3D
+# Include NVT thermostat for customizable isotherms
 # More thermodynamic state metrics, properties
-# Print options,
+# Print options
 # Long term goals: incorporate QM calculation
 
 from Parsers import *
