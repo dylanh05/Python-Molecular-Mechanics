@@ -29,5 +29,3 @@ class Physics:
                 obj.y = 1
             if obj.y > sim_box-1:
                 obj.y = sim_box-1
-
-

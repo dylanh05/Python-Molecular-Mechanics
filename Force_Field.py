@@ -23,7 +23,7 @@ class Force_Field:
             obj.y = ycoor
         return position
 
-    #Creates matrix of electric potentials in space due to each point charge, then creates final potentials at each point by summing
+    #Creates matrix of electric potentials in space due to each point charge
     #Note: bq_potential must be run after generating position
     def bq_potential(self, objects,position):
         k = 8987551788
@@ -68,6 +68,7 @@ class Force_Field:
             field[x][y] = point_field
         return field
 
+    #Needed for forcefield calculations
     def update_position(self, objects):
         position = np.empty((sim_box,sim_box),dtype=object)
 

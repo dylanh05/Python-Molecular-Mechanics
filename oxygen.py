@@ -8,3 +8,4 @@ class oxygen:
         self.z = pos[2]
         self.accel = [0, 0]
         self.velocity = [0, 0]
+        self.kenergy = .5*self.mass*(self.velocity[0]**2+self.velocity[1]**2)
