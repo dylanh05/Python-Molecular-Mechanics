@@ -1,0 +1,12 @@
+#This is the structure of our input geometry file
+# Units--- A
+
+matom
+    HX 1 1 -0.75754 0.58708 0.00000
+end
+
+geometry
+    O 0.00000 0.00000 0.00000
+    H 0.75754 0.58708 0.00000
+end
+
