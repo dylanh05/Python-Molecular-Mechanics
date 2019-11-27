@@ -16,8 +16,10 @@ global output_file
 
 def run_sim(input_file,out_file,time_step,center,iter):
     out_file_name = str(out_file)
-    system = Parsers()
-    objects = system.parse_geo(input_file)
+    read_file = Parsers()
+    with open(input_file) as inp:
+        contents = inp.read().splitlines()
+    objects = read_file.parse_geo(contents)
 
     fields = Force_Field()
     physics_env = Physics()
