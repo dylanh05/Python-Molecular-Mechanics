@@ -6,11 +6,7 @@ from mAtom import *
 #Contains input file parsers, extracts
 class Parsers:
 
-    def parse_geo(self, input_file):
-        with open(input_file) as inp:
-            global contents
-            contents = inp.read().splitlines()
-        
+    def parse_geo(self, contents):
         #Sections of input file
         geometry = False
         matom = False
@@ -18,10 +14,7 @@ class Parsers:
         objects = []
 
         for line in contents:
-            
             #Include an error catching mechanism
-            
-            
                 
             #Gets quantum atoms properties
             if "qatom" in line:
