@@ -25,9 +25,7 @@ class Parsers:
                 if "end" in line:
                     qatom = False
                     continue
-                break
-               
-                
+                breakw
             
             #Gets newtonian atoms properties
             if "matom" in line:
@@ -80,3 +78,8 @@ class Parsers:
                         objects.append(hydrogen(pos))
                 break
         return objects
+    def parse_options(self,contents):
+        for line in contents:
+            print("Do something")
+
+            
