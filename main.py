@@ -1,7 +1,6 @@
 # TODO: create function that can create a new atom object for any atom (like a par file)
 # Make input file more functional: include input and output file
 # Increase randomness by using statistical mechanics
-# Convert to 3D
 # Include NVT thermostat for customizable isotherms
 # More thermodynamic state metrics, properties
 # Print options
