@@ -25,7 +25,7 @@ class Parsers:
                 if "end" in line:
                     qatom = False
                     continue
-                breakw
+                break
             
             #Gets newtonian atoms properties
             if "matom" in line:
